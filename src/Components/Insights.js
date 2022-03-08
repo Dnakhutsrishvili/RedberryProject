@@ -79,34 +79,36 @@ const Insights = (props) => {
             </div>
           </form>
 
-          <div>
-            <label className={classes.secondp}>
-              What would you speak about at Devtalk?
-            </label>
+          {devboolean && (
+            <div>
+              <label className={classes.secondp}>
+                What would you speak about at Devtalk?
+              </label>
 
-            <textarea
-              id="devtalk"
-              name="devtalk"
-              rows="6"
-              cols="50"
-              placeholder="I would..."
-              onChange={getdevtalktext}
-              className={classes.text}
-            ></textarea>
+              <textarea
+                id="devtalk"
+                name="devtalk"
+                rows="6"
+                cols="50"
+                placeholder="I would..."
+                onChange={getdevtalktext}
+                className={classes.text}
+              ></textarea>
 
-            <label className={classes.lastquestion}>
-              Tell us something special
-            </label>
+              <label className={classes.lastquestion}>
+                Tell us something special
+              </label>
 
-            <textarea
-              id="special"
-              name="special"
-              rows="4"
-              cols="30"
-              placeholder="I..."
-              onChange={getspecialtext}
-            ></textarea>
-          </div>
+              <textarea
+                id="special"
+                name="special"
+                rows="4"
+                cols="30"
+                placeholder="I..."
+                onChange={getspecialtext}
+              ></textarea>
+            </div>
+          )}
         </div>
         <div className={classes.rightPanel}>
           <h1 className={classes.rightTitle}> Redberrian Insights</h1>
