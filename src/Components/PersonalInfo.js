@@ -73,6 +73,7 @@ const PersonalInfo = (props) => {
     if (inputPhone === "") {
       delete personalInfo.phone;
     }
+
     props.onValidate(personalInfo);
   };
 
