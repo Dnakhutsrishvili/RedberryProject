@@ -1,0 +1,48 @@
+.btn {
+  position: absolute;
+  width: 395px;
+  height: 79px;
+  left: 758px;
+  top: 458px;
+  cursor: pointer;
+  background: #fe3b1f;
+  border-radius: 50px;
+}
+
+.btntext {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+.background {
+  background: radial-gradient(50% 50% at 50% 50%, #0c0d0e 0%, #151718 73.44%);
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+}
+.link {
+  position: absolute;
+  width: 190px;
+  height: 50px;
+  left: 898px;
+  top: 572px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 34px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration-line: underline;
+
+  color: #ffffff;
+}

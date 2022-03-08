@@ -1,0 +1,61 @@
+.btn {
+  position: absolute;
+  width: 395px;
+  height: 79px;
+  left: 754px;
+  top: 492px;
+  background: #fe3b1f;
+  border-radius: 50px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.btntxt {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  position: absolute;
+  width: 1090px;
+  height: 212px;
+  left: 434px;
+  top: 175px;
+
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 96px;
+  line-height: 119px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #fe3b1f;
+}
+.submit {
+  position: absolute;
+  width: 338px;
+  height: 66px;
+  left: 795px;
+  top: 589px;
+
+  margin-top: 20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+
+  align-items: center;
+  text-align: center;
+  text-decoration-line: underline;
+  cursor: pointer;
+
+  color: #ffffff;
+}

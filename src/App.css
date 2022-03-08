@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: "Rowdies";
+  src: local("Rowdies"),
+    url("./Fonts/Rowdies/Rowdies-Regular.ttf") format("truetype");
+  font-weight: bold;
+}
+.font-face-gm {
+  font-family: "Rowdies";
+}

@@ -1,0 +1,202 @@
+.background {
+  position: relative;
+  width: 1920px;
+  height: 100%;
+
+  display: flex;
+  /* Primary BG */
+
+  background: radial-gradient(50% 50% at 50% 50%, #0c0d0e 0%, #151718 73.44%);
+}
+
+.title {
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 70px;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 0.11em;
+  margin-left: 395px;
+  margin-top: 94px;
+
+  color: #ffffff;
+}
+.mappeddiv {
+  display: flex;
+  flex-direction: row;
+  width: 1920px;
+  background-color: #ffffff;
+  gap: 15px;
+
+  margin-left: 343px;
+  margin-top: 40px;
+}
+.dropbtn {
+  width: 1154px;
+  height: 52px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  /* Redberry Red */
+  color: #ffffff;
+  background: #fe3b1f;
+}
+.personaltitle {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-decoration-line: underline;
+
+  /* Redberry Red */
+
+  color: #fe3b1f;
+}
+
+.personaldata {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.name {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  margin-left: 27px;
+
+  color: #454545;
+}
+.flex {
+  display: flex;
+}
+
+.covidTitle {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-decoration-line: underline;
+
+  /* Redberry Red */
+
+  color: #fe3b1f;
+}
+.flexcovid {
+  display: flex;
+  flex-direction: column;
+  margin-left: 343px;
+  margin-top: 0;
+}
+.flexradio {
+  display: flex;
+  flex-direction: column;
+}
+.pcovid {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.label {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  align-items: center;
+
+  color: #000000;
+}
+
+.input {
+  width: 13px;
+  height: 13px;
+  left: 503px;
+  top: 973px;
+
+  border: 1px solid #464646;
+}
+.date {
+  width: 349px;
+  height: 54px;
+
+  background: #fffcfc;
+  /* Primary Stroke */
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+}
+.textarea {
+  width: 447px;
+  height: 122px;
+
+  background: #ffffff;
+  /* Primary Stroke */
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+}
+.textareaspecial {
+  width: 447px;
+  height: 89px;
+  left: 989px;
+  top: 1396px;
+
+  background: #ffffff;
+  /* Primary Stroke */
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+}
+.poof {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+.skillset {
+  margin-left: 95px;
+}
+.personalinfo {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+}
+.btn {
+  width: 1154px;
+  height: 52px;
+
+  /* Redberry Red */
+
+  background: #fe3b1f;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fffcfc;
+  margin-bottom: 7px;
+}
