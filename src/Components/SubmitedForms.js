@@ -4,7 +4,8 @@ import classes from "./SubmitedForms.module.css";
 
 const SubmitedForms = () => {
   const [data, setData] = useState([]);
-  const [index, setindex] = useState(false);
+  const [indexer, setindexer] = useState(false);
+  const id = Math.round(Math.random() * 10);
 
   useEffect(() => {
     axios
@@ -19,15 +20,13 @@ const SubmitedForms = () => {
       });
   }, []);
 
-  // if (data[0].skills[0].id === 1) {
-  //   setnewskilltitle("html");
-  // }
-  // const open = () => {
-  //   console.log(data.length);
-  // };
   const click = () => {
-    setindex(true);
+    setindexer(true);
+    if (indexer) {
+      setindexer(false);
+    }
   };
+
   return (
     <>
       <div className={classes.background}>
@@ -36,11 +35,11 @@ const SubmitedForms = () => {
 
       <div>
         {data.map((option) => (
-          <div>
+          <div key={option.email.length * Math.random()}>
             <button className={classes.btn} onClick={click}>
-              1
+              {data.indexOf(option)}
             </button>
-            {index && (
+            {indexer && (
               <div>
                 <div className={classes.mappeddiv}>
                   <div className={classes.personalinfo}>
