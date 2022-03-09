@@ -5,7 +5,7 @@ import classes from "./SubmitedApk.module.css";
 const SubmitedApk = (props) => {
   const submit = () => {
     const newobj = {
-      token: "479b20d7-6522-47e9-857c-54f42ff16c16",
+      token: "b2a2a7bf-551d-423c-95b0-713b14d19860",
       ...props.onSubmit[0],
       ...props.onSubmit[1],
       ...props.onSubmit[2],

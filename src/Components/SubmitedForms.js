@@ -1,17 +1,14 @@
 import axios from "axios";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import classes from "./SubmitedForms.module.css";
 
 const SubmitedForms = () => {
   const [dataa, setData] = useState([]);
-  const [indexer, setindexer] = useState(false);
-
-  const id = Math.round(Math.random() * 10);
 
   useEffect(() => {
     axios
       .get(
-        "https://bootcamp-2022.devtest.ge/api/applications?token=479b20d7-6522-47e9-857c-54f42ff16c16"
+        "https://bootcamp-2022.devtest.ge/api/applications?token=b2a2a7bf-551d-423c-95b0-713b14d19860"
       )
       .then((res) => {
         setData(res.data);
@@ -25,12 +22,25 @@ const SubmitedForms = () => {
   //     setindexer(true);
   //   }
   // };
+  // const [indexer, setindexer] = useState(dataa.index);
+  const [show, setshow] = useState(false);
+
   const click = () => {
-    setindexer(true);
-    if (indexer) {
-      setindexer(false);
+    setshow(true);
+    if (show) {
+      setshow(false);
     }
   };
+  // const indexxx = dataa.indexOf([0]);
+  // console.log(dataa.index);
+
+  // const newclick = (ind) => {
+  //   if (1 === ind) {
+  //     setshow(true);
+  //   } else {
+  //     setshow(false);
+  //   }
+  // };
 
   return (
     <>
@@ -45,7 +55,7 @@ const SubmitedForms = () => {
               {index + 1}
             </button>
 
-            {indexer && (
+            {show && (
               <div>
                 <div className={classes.mappeddiv}>
                   <div className={classes.personalinfo}>
@@ -72,7 +82,7 @@ const SubmitedForms = () => {
                   {/* skillset */}
                   <div className={classes.skillset}>
                     <h1 className={classes.personaltitle}>Skillset</h1>
-                    {dataa[0].skills.map((option) => (
+                    {dataa[dataa.indexOf(option)].skills.map((option) => (
                       <div className={classes.flex}>
                         <div>
                           <h1 className={classes.personaldata}>{option.id}</h1>
@@ -96,16 +106,16 @@ const SubmitedForms = () => {
                         <div>
                           <input
                             type="radio"
-                            id="yesdev"
-                            name="yesdev"
-                            value="yesdev"
+                            id="yesone"
+                            name="yesone"
+                            value="yesone"
                             defaultChecked
                           />
 
                           <label className={classes.label}>Yes</label>
                         </div>
                         <div>
-                          <input type="radio" name="Nodevv" value="Nodevv" />
+                          <input type="radio" name="noone" value="noone" />
                           <label className={classes.label}>No</label>
                         </div>
                       </div>
@@ -115,16 +125,16 @@ const SubmitedForms = () => {
                         <div>
                           <input
                             type="radio"
-                            id="Norad"
-                            name="Norad"
-                            value="Norad"
+                            id="notwo"
+                            name="notwo"
+                            value="notwo"
                             defaultChecked
                           />
 
                           <label className={classes.label}>No</label>
                         </div>
                         <div>
-                          <input type="radio" name="Yesrad" value="Yesrad" />
+                          <input type="radio" name="nothree" value="nothree" />
                           <label className={classes.label}>Yes</label>
                         </div>
                       </div>
@@ -170,11 +180,15 @@ const SubmitedForms = () => {
                           </label>
                         </div>
                         <div>
-                          <input type="radio" name="Home" value="Home" />
+                          <input type="radio" name="Homeone" value="Homeone" />
                           <label className={classes.label}>From Home</label>
                         </div>
                         <div>
-                          <input type="radio" name="Hybrid" value="Hybrid" />
+                          <input
+                            type="radio"
+                            name="Hybridthree"
+                            value="Hybridthree"
+                          />
                           <label className={classes.label}>Hybrid</label>
                         </div>
                       </div>
@@ -185,15 +199,19 @@ const SubmitedForms = () => {
                         <div>
                           <input
                             type="radio"
-                            id="Home"
-                            name="Home"
-                            value="Home"
+                            id="Hometwo"
+                            name="Hometwo"
+                            value="Hometwo"
                             defaultChecked
                           />
                           <label className={classes.label}>From Home</label>
                         </div>
                         <div>
-                          <input type="radio" name="Office" value="Office" />
+                          <input
+                            type="radio"
+                            name="Officethree"
+                            value="Officethree"
+                          />
                           <label className={classes.label}>
                             From Sairme Office
                           </label>
@@ -203,8 +221,8 @@ const SubmitedForms = () => {
                           <input
                             className={classes.input}
                             type="radio"
-                            name="Hybrid"
-                            value="Hybrid"
+                            name="Hybridfour"
+                            value="Hybridfour"
                           />
                           <label className={classes.label}>Hybrid</label>
                         </div>
@@ -216,22 +234,26 @@ const SubmitedForms = () => {
                         <div>
                           <input
                             type="radio"
-                            id="Hybrid"
-                            name="Hybrid"
-                            value="Hybrid"
+                            id="Hybridone"
+                            name="Hybridone"
+                            value="Hybridone"
                             defaultChecked
                           />
 
                           <label className={classes.label}>Hybrid</label>
                         </div>
                         <div>
-                          <input type="radio" name="Office" value="Office" />
+                          <input
+                            type="radio"
+                            name="Officefour"
+                            value="Officefour"
+                          />
                           <label className={classes.label}>
                             From Sairme Office
                           </label>
                         </div>
                         <div>
-                          <input type="radio" name="Home" value="Home" />
+                          <input type="radio" name="Homefie" value="Homefie" />
                           <label className={classes.label}>From Home</label>
                         </div>
                       </div>
@@ -244,16 +266,16 @@ const SubmitedForms = () => {
                       <div>
                         <input
                           type="radio"
-                          id="yes"
-                          name="yes"
-                          value="yes"
+                          id="yesw"
+                          name="yesw"
+                          value="yesw"
                           defaultChecked
                         />
 
                         <label className={classes.label}>Yes</label>
                       </div>
                       <div>
-                        <input type="radio" name="No" value="No" />
+                        <input type="radio" name="Now" value="Now" />
                         <label className={classes.label}>No</label>
                       </div>
                     </div>
@@ -263,16 +285,16 @@ const SubmitedForms = () => {
                       <div>
                         <input
                           type="radio"
-                          id="No"
-                          name="No"
-                          value="No"
+                          id="Noe"
+                          name="Noe"
+                          value="Noe"
                           defaultChecked
                         />
 
                         <label className={classes.label}>No</label>
                       </div>
                       <div>
-                        <input type="radio" name="Yes" value="Yes" />
+                        <input type="radio" name="Yesr" value="Yesr" />
                         <label className={classes.label}>Yes</label>
                       </div>
                     </div>
@@ -308,7 +330,7 @@ const SubmitedForms = () => {
                         <label className={classes.label}>Yes</label>
                       </div>
                       <div>
-                        <input type="radio" name="No" value="No" />
+                        <input type="radio" name="Not" value="Not" />
                         <label className={classes.label}>No</label>
                       </div>
                     </div>
@@ -327,7 +349,7 @@ const SubmitedForms = () => {
                         <label className={classes.label}>No</label>
                       </div>
                       <div>
-                        <input type="radio" name="Yes" value="Yes" />
+                        <input type="radio" name="Yesy" value="Yesy" />
                         <label className={classes.label}>Yes</label>
                       </div>
                     </div>
