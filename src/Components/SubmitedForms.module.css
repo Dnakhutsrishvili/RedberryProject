@@ -30,8 +30,9 @@
   background-color: #ffffff;
   gap: 15px;
 
-  margin-left: 343px;
+  margin-left: 543px;
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 .dropbtn {
   width: 1154px;
@@ -102,8 +103,8 @@
 .flexcovid {
   display: flex;
   flex-direction: column;
-  margin-left: 343px;
-  margin-top: 0;
+  margin-left: 543px;
+  margin-top: -360px;
 }
 .flexradio {
   display: flex;
@@ -180,7 +181,7 @@
 }
 
 .skillset {
-  margin-left: 95px;
+  margin-left: 195px;
 }
 .personalinfo {
   display: flex;

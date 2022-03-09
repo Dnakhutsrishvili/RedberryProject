@@ -39,6 +39,7 @@ const SubmitedForms = () => {
             <button className={classes.btn} onClick={click}>
               {data.indexOf(option)}
             </button>
+
             {indexer && (
               <div>
                 <div className={classes.mappeddiv}>
@@ -99,7 +100,7 @@ const SubmitedForms = () => {
                           <label className={classes.label}>Yes</label>
                         </div>
                         <div>
-                          <input type="radio" name="Nodev" value="Nodev" />
+                          <input type="radio" name="Nodevv" value="Nodevv" />
                           <label className={classes.label}>No</label>
                         </div>
                       </div>
@@ -109,16 +110,16 @@ const SubmitedForms = () => {
                         <div>
                           <input
                             type="radio"
-                            id="Nodev"
-                            name="Nodev"
-                            value="Nodev"
+                            id="Norad"
+                            name="Norad"
+                            value="Norad"
                             defaultChecked
                           />
 
                           <label className={classes.label}>No</label>
                         </div>
                         <div>
-                          <input type="radio" name="Yesdev" value="Yesdev" />
+                          <input type="radio" name="Yesrad" value="Yesrad" />
                           <label className={classes.label}>Yes</label>
                         </div>
                       </div>

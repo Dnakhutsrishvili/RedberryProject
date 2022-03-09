@@ -55,14 +55,7 @@ const PersonalInfo = (props) => {
     } else {
       setEmailError(true);
     }
-    if (
-      inputPhone.trim().startsWith(+995, 0) &&
-      inputPhone.length.trim() >= 10
-    ) {
-      setphonevaidation(true);
-    } else {
-      setPhoneError(true);
-    }
+
     //passing personal info to parent component
     const personalInfo = {
       first_name: inputName,
@@ -73,7 +66,7 @@ const PersonalInfo = (props) => {
     if (inputPhone === "") {
       delete personalInfo.phone;
     }
-
+    console.log(personalInfo);
     props.onValidate(personalInfo);
   };
 
@@ -82,9 +75,7 @@ const PersonalInfo = (props) => {
       phonevaidation &&
       inputName.length > 2 &&
       inputLastName.length > 2 &&
-      /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail) &&
-      inputPhone.trim().startsWith(+995, 0) &&
-      inputPhone.length.trim() >= 10
+      /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail)
     ) {
       setnextPage("teckskill");
     }
@@ -101,7 +92,7 @@ const PersonalInfo = (props) => {
     } else {
       setnextPage("");
     }
-  }, [inputName, phonevaidation, inputLastName, inputEmail, inputPhone]);
+  }, [inputName, phonevaidation, inputLastName, inputEmail]);
   return (
     <>
       <div className={classes.parent}>
