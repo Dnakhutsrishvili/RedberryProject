@@ -1,10 +1,11 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import classes from "./SubmitedForms.module.css";
 
 const SubmitedForms = () => {
-  const [data, setData] = useState([]);
+  const [dataa, setData] = useState([]);
   const [indexer, setindexer] = useState(false);
+
   const id = Math.round(Math.random() * 10);
 
   useEffect(() => {
@@ -19,7 +20,11 @@ const SubmitedForms = () => {
         console.log(err);
       });
   }, []);
-
+  // const handleRemoveItem = (e) => {
+  //   if (dataa.map((opt) => opt.email === e)) {
+  //     setindexer(true);
+  //   }
+  // };
   const click = () => {
     setindexer(true);
     if (indexer) {
@@ -34,10 +39,10 @@ const SubmitedForms = () => {
       </div>
 
       <div>
-        {data.map((option) => (
-          <div key={option.email.length * Math.random()}>
+        {dataa.map((option, index) => (
+          <div key={index}>
             <button className={classes.btn} onClick={click}>
-              {data.indexOf(option)}
+              {index + 1}
             </button>
 
             {indexer && (
@@ -67,7 +72,7 @@ const SubmitedForms = () => {
                   {/* skillset */}
                   <div className={classes.skillset}>
                     <h1 className={classes.personaltitle}>Skillset</h1>
-                    {data[0].skills.map((option) => (
+                    {dataa[0].skills.map((option) => (
                       <div className={classes.flex}>
                         <div>
                           <h1 className={classes.personaldata}>{option.id}</h1>

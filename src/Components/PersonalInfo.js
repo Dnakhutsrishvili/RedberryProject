@@ -49,6 +49,14 @@ const PersonalInfo = (props) => {
     } else {
       setlastNameError(false);
     }
+    if (
+      (/^995/.test(inputPhone) && inputPhone.length === 12) ||
+      inputPhone === ""
+    ) {
+      setPhoneError(false);
+    } else {
+      setPhoneError(true);
+    }
 
     if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail)) {
       setEmailError(false);
@@ -72,10 +80,11 @@ const PersonalInfo = (props) => {
 
   const nextPageValidate = () => {
     if (
-      phonevaidation &&
-      inputName.length > 2 &&
-      inputLastName.length > 2 &&
-      /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail)
+      (/^995/.test(inputPhone) && inputPhone.length === 12) ||
+      (inputPhone === "" &&
+        inputName.length > 2 &&
+        inputLastName.length > 2 &&
+        /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail))
     ) {
       setnextPage("teckskill");
     }
@@ -83,16 +92,17 @@ const PersonalInfo = (props) => {
 
   useEffect(() => {
     if (
-      phonevaidation &&
-      inputName.length > 2 &&
-      inputLastName.length > 2 &&
-      /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail)
+      (/^995/.test(inputPhone) && inputPhone.length === 12) ||
+      (inputPhone === "" &&
+        inputName.length > 2 &&
+        inputLastName.length > 2 &&
+        /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(inputEmail))
     ) {
       setnextPage("teckskill");
     } else {
       setnextPage("");
     }
-  }, [inputName, phonevaidation, inputLastName, inputEmail]);
+  }, [inputName, phonevaidation, inputLastName, inputEmail, inputPhone]);
   return (
     <>
       <div className={classes.parent}>
